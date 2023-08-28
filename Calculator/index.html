@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Durgesh Vaigandla">
+    <meta name="description"
+        content="A simple calculator web application created by Durgesh Vaigandla. Perform basic calculations easily online.">
+    <meta name="keywords"
+        content="calculator, web application, basic calculations, online calculator, Durgesh Vaigandla">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Calculator | Web Application by Durgesh">
+    <meta property="og:description"
+        content="A simple calculator web application created by Durgesh Vaigandla. Perform basic calculations easily online.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://calculator-durgesh.netlify.app/calculator.png">
+    <!--Google Verification SEO -->
+    <meta name="google-site-verification" content="ihEcbWW_MLmOyQngEN9PzU44dsMQEw7Hu9fQWQtQVvA" />
+    <link rel="canonical" href="https://calculator-durgesh.netlify.app">
+    <link rel="stylesheet" href="./index.css">
+    <!--Adding Manifest.JSON-->
+    <link rel="manifest" href="manifest.json">
+    <!--FonstAwsome-->
+    <script src="https://kit.fontawesome.com/be1c87c3f5.js" crossorigin="anonymous"></script>
+    <!--Unicons-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="shortcut icon" href="./calculator.png" type="image/x-icon">
+    <title>Durgesh | Calculator</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-bar">
+            <h1>Calculator <i class="uil uil-calculator-alt"></i></h1>
+        </div>
+        <div class="nav-elements">
+            <h4><a href="./index.html">Home <i class="uil uil-home"></i></a></h4>
+            <h4><a href="https://focusquest.netlify.app/portfolio">Contact <i class="uil uil-phone"></i></a></h4>
+            <h4><a href="https://GitHub.com/Durgesh-2005">GitHub <i class="uil uil-github-alt"></i></a></h4>
+            <h4><a href="https://LinkedIn.com/in/vaigandladurgesh">LinkedIn <i class="uil uil-linkedin"></i></a></h4>
+        </div>
+    </nav>
+    <div class="container" onselectstart="return false">
+        <div class="calculator">
+            <input type="text" id="display">
+            <div class="row1">
+                <button onclick="clearDisplay()">AC</button>
+                <button onclick="backspace()">&#9003;</button>
+                <button onclick="appendToDisplay('&#40;')">&#40;</button>
+                <button onclick="appendToDisplay('&#41;')">&#41;</button>
+            </div>            
+            <div class="row2">
+                <button onclick="addNumber(7)">7</button>
+                <button onclick="addNumber(8)">8</button>
+                <button onclick="addNumber(9)">9</button>
+                <button class="operator" onclick="addOperator('*')">*</button>
+                <button class="operator" onclick="addOperator('/')">/</button>
+            </div>
+            <div class="row3">
+                <button onclick="addNumber(4)">4</button>
+                <button onclick="addNumber(5)">5</button>
+                <button onclick="addNumber(6)">6</button>
+                <button class="operator" onclick="addOperator('-')">-</button>
+                <button class="operator" onclick="addOperator('.')">.</button>
+            </div>
+            <div class="row4">
+                <button onclick="addNumber(1)">1</button>
+                <button onclick="addNumber(2)">2</button>
+                <button onclick="addNumber(3)">3</button>
+                <button class="operator" onclick="addOperator('+')">+</button>
+                <button class="operator" onclick="addOperator('%')">%</button>
+            </div>
+            <div class="row5">
+                <button onclick="addNumber(0)">0</button>
+                <button onclick="addNumber('00')">00</button>
+                <button onclick="addNumber('000')">000</button>
+                <button class="calculate" onclick="calculate()">=</button>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <footer>Designed by Durgesh✌️</footer>
+    <!--JScript File-->
+    <script src="index.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then((registration) => {
+                        console.log('Service Worker registered with scope:', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
+
+    </script>
+</body>
+
+</html>

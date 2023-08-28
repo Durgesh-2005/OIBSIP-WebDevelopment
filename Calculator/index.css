@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+nav {
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3498db;
+}
+
+#bars {
+    display: none;
+}
+
+.nav-elements {
+    display: flex;
+    gap: 2vw;
+}
+
+h1 {
+    margin-left: 30px;
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.nav-elements>h4:last-child {
+    margin-right: 30px;
+}
+
+h4 a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+h4 a:hover {
+    color: #e74c3c;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.calculator {
+    display: flex;
+    width: 30vw;
+    border: 2px solid #3498db;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    width: 25vw;
+    height: 8vh;
+    font-size: 2rem;
+    text-align: right;
+    padding-right: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: default;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    width: 4vw;
+    height: 7vh;
+    font-size: 1.8rem;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+button.operator {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+button.operator:hover {
+    color: #e74c3c;
+    background-color: #fff;
+}
+
+button.calculate {
+    background-color: #ffa500;
+    color: #fff;
+}
+
+.row1 button:first-child {
+    width: 9vw;
+}
+
+.row5 button:last-child {
+    width: 9vw;
+}
+
+footer {
+    text-align: center;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 5vw;
+    }
+
+    .nav-elements {
+        display: none;
+    }
+
+    .container {
+        width: 100vw;
+    }
+
+    .calculator {
+        width: 90vw;
+    }
+
+    input {
+        width: 74vw;
+        height: 7vh;
+        font-size: 5vw;
+    }
+
+    button {
+        width: 12vw;
+        height: 10vw;
+        font-size: 4vw;
+    }
+
+    .row1 button:first-child {
+        width: 27vw;
+    }
+
+    .row5 button:last-child {
+        width: 27vw;
+    }
+}
