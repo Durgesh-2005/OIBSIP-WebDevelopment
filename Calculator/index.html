@@ -32,24 +32,26 @@
 <body>
     <nav>
         <div class="nav-bar">
-            <h1>Calculator <i class="uil uil-calculator-alt"></i></h1>
+            <h1>Calculator</h1>
+            <img src="./calculator.png" alt="">
         </div>
         <div class="nav-elements">
-            <h4><a href="./index.html">Home <i class="uil uil-home"></i></a></h4>
+            <h4><a href="./index.html">Home <i class="uil uil-home"></i><span></span></a></h4>
             <h4><a href="https://focusquest.netlify.app/portfolio">Contact <i class="uil uil-phone"></i></a></h4>
             <h4><a href="https://GitHub.com/Durgesh-2005">GitHub <i class="uil uil-github-alt"></i></a></h4>
             <h4><a href="https://LinkedIn.com/in/vaigandladurgesh">LinkedIn <i class="uil uil-linkedin"></i></a></h4>
         </div>
     </nav>
-    <div class="container" onselectstart="return false">
+    <!--Calculator-->
+    <div id="container" class="container" onselectstart="return false">
         <div class="calculator">
             <input type="text" id="display">
             <div class="row1">
                 <button onclick="clearDisplay()">AC</button>
-                <button onclick="backspace()">&#9003;</button>
+                <button class="backspace" onclick="backspace()">&#9003;</button>
                 <button onclick="appendToDisplay('&#40;')">&#40;</button>
                 <button onclick="appendToDisplay('&#41;')">&#41;</button>
-            </div>            
+            </div>
             <div class="row2">
                 <button onclick="addNumber(7)">7</button>
                 <button onclick="addNumber(8)">8</button>
@@ -77,6 +79,82 @@
                 <button onclick="addNumber('000')">000</button>
                 <button class="calculate" onclick="calculate()">=</button>
             </div>
+        </div>
+    </div>
+    <h3>Converters</h3>
+    <div class="navigator">
+        <button id="calculatorBtn" style="display: none;">Calculator</button>
+        <button id="lengthBtn">Length</button>
+        <button id="massBtn">Mass</button>
+    </div>
+    <!-- Length Converter -->
+    <div class="lengthContainer" id="lengthContainer">
+        <div id="lengthConverter">
+            <h3>Length Converter</h3>
+            <div class="selector">
+                <div>
+                    <p class="Value">From</p>
+                    <select id="fromUnit" name="fromUnit">
+                        <option value="meters">Meters</option>
+                        <option value="kilometers">Kilometers</option>
+                        <option value="feet">Feet</option>
+                        <option value="inches">Inches</option>
+                        <option value="yards">Yards</option>
+                    </select>
+                </div>
+                <div>
+                    <p class="Options">To</p>
+                    <select id="toUnit" name="toUnit">
+                        <option value="meters">Meters</option>
+                        <option selected value="kilometers">Kilometers</option>
+                        <option value="feet">Feet</option>
+                        <option value="inches">Inches</option>
+                        <option value="yards">Yards</option>
+                    </select>
+                </div>
+            </div>
+            <div class="lengthInput">
+                <p>Enter the Value</p>
+                <input id="inputValue" type="number">
+            </div>
+            <div class="buttons">
+                <button id="lengthConvert">= Convert</button>
+            </div>
+            <p id="result"></p>
+        </div>
+    </div>
+    <!--Mass Converter-->
+   <div class="massContainer" id="massContainer">
+        <div id="massConverter">
+            <h3>Mass Converter</h3>
+            <div class="selector">
+                <div>
+                    <p class="Value">From</p>
+                    <select  name="massFromUnit">
+                        <option value="grams">Grams</option>
+                        <option value="kilograms">KiloGrams</option>
+                        <option value="pounds">Pounds</option>
+                        <option value="ounces">Ounces</option>
+                    </select>
+                </div>
+                <div>
+                    <p class="Options">To</p>
+                    <select id="massToUnit" name="massToUnit">
+                        <option value="grams">Grams</option>
+                        <option selected value="kilograms">KiloGrams</option>
+                        <option value="pounds">Pounds</option>
+                        <option value="ounces">Ounces</option>
+                    </select>
+                </div>
+            </div>
+            <div class="massInput">
+                <p>Enter the Value</p>
+                <input id="massInputValue" type="number">
+            </div>
+            <div class="buttons">
+                <button id="massConvert">= Convert</button>
+            </div>
+            <p id="massResult"></p>
         </div>
     </div>
     <!--Footer-->
