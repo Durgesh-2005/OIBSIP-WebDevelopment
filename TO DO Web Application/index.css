@@ -81,31 +81,40 @@ nav ul li a:hover {
     color: rgb(203, 203, 203);
 }
 
-nav .header{
+nav .header {
     display: flex;
+    gap: 10px;
+    justify-content: center;
 }
 
-nav .search-bar{
+.header h1 {
+    font-size: 2vw;
+}
+
+nav .search-bar {
+    display: none;
     background-color: #fff;
     border: none;
     border-radius: 10px;
     padding: 10px;
 }
 
+nav .externalLinks {
+    margin-left: 48vw;
+}
+
 nav #logo {
     width: 30px;
     height: 30px;
     padding-right: 5px;
-    box-shadow: 2px 2px 8px #131312;
-}
-nav #profile {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    box-shadow: 2px 2px 8px #131312;
 }
 
-nav input{
+nav #profile {
+    font-size: 2vw;
+    border-radius: 50%;
+}
+
+nav input {
     margin-left: 5px;
     width: 550px;
     height: 30px;
@@ -114,19 +123,19 @@ nav input{
     outline: none;
 }
 
-b{
+b {
     color: #fef8fd;
 }
 
-p{
+p {
     color: #eee;
 }
 
-i{
+i {
     color: #ffec78;
 }
 
-h1{
+h1 {
     color: #fef8fd;
 }
 
@@ -134,10 +143,10 @@ h1{
 
 .container {
     background-color: #666c71;
-    border-radius: 25px;
+    border-radius: 10px;
     margin: 0 auto;
     width: 600px;
-    max-height: 425px;
+    max-height: 470px;
     margin-bottom: 20px;
     padding: 10px;
     color: #eee;
@@ -179,8 +188,9 @@ h1{
 }
 
 .input-section {
-    text-align: center;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+
 }
 
 .input-section input {
@@ -192,7 +202,7 @@ h1{
     padding: 5px;
     border: 2px solid #1abc9c;
     color: #eee;
-    background-color: rgb(46, 56, 65);
+    background-color: #2e3841;
 }
 
 .input-section button {
@@ -206,7 +216,7 @@ h1{
     cursor: pointer;
 }
 
-.Btn{
+.Btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -233,7 +243,7 @@ h1{
 .deleteBtn .deleteIcon {
     margin-left: 5px;
     /* Add 5px space to the left of the icon */
-    background-color: rgb(46, 56, 65);
+    background-color: #666c71;
 }
 
 .container #todoList,
@@ -246,7 +256,7 @@ h1{
 
 #todoList button {
     border: none;
-    background-color: rgb(46, 56, 65);
+    background-color: #666c71;
 
 }
 
@@ -263,7 +273,7 @@ h1{
     outline: none;
     border: none;
     padding: 2px;
-    background-color: rgb(46, 56, 65);
+    background-color: #666c71;
     width: 89%;
     color: azure;
 }
@@ -289,7 +299,7 @@ h1{
 
 #completedTasks button {
     border: none;
-    background-color: rgb(46, 56, 65);
+    background-color: #666c71;
 }
 
 #completedTasks li {
@@ -303,7 +313,7 @@ h1{
     outline: none;
     border: none;
     padding: 2px;
-    background-color: rgb(46, 56, 65);
+    background-color: #666c71;
     width: 89%;
 }
 
@@ -341,6 +351,22 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+    .header h1{
+        font-size: 6vw;
+    }
+
+    nav #profile{
+        font-size: 10vw;
+    }
+
+    .search-bar {
+        display: none;
+    }
+
+    .externalLinks {
+        display: none;
+    }
+
     .container {
         max-width: 350px;
     }
@@ -353,14 +379,17 @@ footer {
         max-width: 80%;
         min-width: 50%;
     }
-    #clearBtn{
-        margin-left: 25%;
+
+    #clearBtn {
+        justify-content: center;
     }
-    #gitBtn{
+
+    #gitBtn {
         margin-left: 27%;
         margin-bottom: 20px;
     }
+
     #completedTasks .taskInput {
-        width: 81%;
+        width: 80%;
     }
 }
