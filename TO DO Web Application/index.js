@@ -43,6 +43,7 @@ function addTask() {
 
     // Save the tasks to Local Storage
     saveTasksToLocalStorage();
+    addTasksCheck()
 }
 
 function enableEdit(event) {
@@ -73,6 +74,8 @@ function deleteTask(event) {
 
     // Save the tasks to Local Storage after deleting a task
     saveTasksToLocalStorage();
+    completedTasksCheck();
+    addTasksCheck()
 }
 
 function handleCheckboxChange(event) {
@@ -89,6 +92,8 @@ function handleCheckboxChange(event) {
 
     // Save the tasks to Local Storage when the checkbox status changes
     saveTasksToLocalStorage();
+    completedTasksCheck();
+    addTasksCheck()
 }
 
 function saveTasksToLocalStorage() {
@@ -146,7 +151,41 @@ function loadTasks() {
             const taskInput = listItem.querySelector('.taskInput');
             taskInput.addEventListener('click', enableEdit);
         });
+        completedTasksCheck();
+        addTasksCheck()
     }
+}
+
+function completedTasksCheck(){
+    // Get references to the <p> and <ul> elements
+var completedTasksHeader = document.getElementById('completedTasks-header');
+var completedTasksList = document.getElementById('completedTasks');
+
+// Check if there are any <li> elements inside the <ul>
+if (completedTasksList.getElementsByTagName('li').length === 0) {
+    // If there are no <li> elements, hide the <p> tag
+    completedTasksHeader.style.display = 'none';
+} else {
+    // If there are <li> elements, display the <p> tag
+    completedTasksHeader.style.display = 'block'; // You can use 'block', 'inline', or 'inline-block' based on your layout needs
+}
+
+}
+function addTasksCheck(){
+    // Get references to the <p> and <ul> elements
+var addTasksHeader = document.getElementById('addTasks-header');
+var addTasksList = document.getElementById('todoList');
+var completedTasksList = document.getElementById('completedTasks');
+
+// Check if there are any <li> elements inside the <ul>
+if (addTasksList.getElementsByTagName('li').length === 0 && completedTasksList.getElementsByTagName('li').length === 0) {
+    // If there are no <li> elements, hide the <p> tag
+    addTasksHeader.style.display = 'block';
+} else {
+    // If there are <li> elements, display the <p> tag
+    addTasksHeader.style.display = 'none'; // You can use 'block', 'inline', or 'inline-block' based on your layout needs
+}
+
 }
 
 // Add event listener to checkboxes
