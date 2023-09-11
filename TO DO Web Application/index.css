@@ -99,9 +99,7 @@ nav .search-bar {
     padding: 10px;
 }
 
-nav .externalLinks {
-    margin-left: 48vw;
-}
+
 
 nav #logo {
     width: 30px;
@@ -112,6 +110,16 @@ nav #logo {
 nav #profile {
     font-size: 2vw;
     border-radius: 50%;
+}
+
+nav button{
+    text-decoration: none;
+    color: #fef8fd;
+    font-size: x-large;
+    font-weight: bold;  
+    background-color: transparent;
+    border: none;
+    outline: none;
 }
 
 nav input {
