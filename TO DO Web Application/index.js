@@ -157,33 +157,25 @@ function loadTasks() {
 }
 
 function completedTasksCheck(){
-    // Get references to the <p> and <ul> elements
 var completedTasksHeader = document.getElementById('completedTasks-header');
 var completedTasksList = document.getElementById('completedTasks');
 
-// Check if there are any <li> elements inside the <ul>
 if (completedTasksList.getElementsByTagName('li').length === 0) {
-    // If there are no <li> elements, hide the <p> tag
     completedTasksHeader.style.display = 'none';
 } else {
-    // If there are <li> elements, display the <p> tag
-    completedTasksHeader.style.display = 'block'; // You can use 'block', 'inline', or 'inline-block' based on your layout needs
+    completedTasksHeader.style.display = 'block'; 
 }
 
 }
 function addTasksCheck(){
-    // Get references to the <p> and <ul> elements
 var addTasksHeader = document.getElementById('addTasks-header');
 var addTasksList = document.getElementById('todoList');
 var completedTasksList = document.getElementById('completedTasks');
 
-// Check if there are any <li> elements inside the <ul>
 if (addTasksList.getElementsByTagName('li').length === 0 && completedTasksList.getElementsByTagName('li').length === 0) {
-    // If there are no <li> elements, hide the <p> tag
     addTasksHeader.style.display = 'block';
 } else {
-    // If there are <li> elements, display the <p> tag
-    addTasksHeader.style.display = 'none'; // You can use 'block', 'inline', or 'inline-block' based on your layout needs
+    addTasksHeader.style.display = 'none'; 
 }
 
 }
