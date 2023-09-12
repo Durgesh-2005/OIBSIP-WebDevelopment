@@ -182,6 +182,13 @@ function addTasksCheck() {
 
 }
 
+const addTasksHeader = document.getElementById("addTasks-header");
+
+addTasksHeader.addEventListener("click", ()=>{
+    var input = document.getElementById("todoInput");
+    input.focus();
+})
+
 // Add event listener to checkboxes
 todoList.addEventListener('change', handleCheckboxChange);
 completedTasksList.addEventListener('change', handleCheckboxChange);
