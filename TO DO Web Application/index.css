@@ -112,11 +112,11 @@ nav #profile {
     border-radius: 50%;
 }
 
-nav button{
+nav button {
     text-decoration: none;
     color: #fef8fd;
     font-size: x-large;
-    font-weight: bold;  
+    font-weight: bold;
     background-color: transparent;
     border: none;
     outline: none;
@@ -359,11 +359,11 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-    .header h1{
-        font-size: 6vw;
+    .header h1 {
+        font-size: 7vw;
     }
 
-    nav #profile{
+    nav #profile {
         font-size: 10vw;
     }
 

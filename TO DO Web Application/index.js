@@ -156,27 +156,27 @@ function loadTasks() {
     }
 }
 
-function completedTasksCheck(){
-var completedTasksHeader = document.getElementById('completedTasks-header');
-var completedTasksList = document.getElementById('completedTasks');
+function completedTasksCheck() {
+    var completedTasksHeader = document.getElementById('completedTasks-header');
+    var completedTasksList = document.getElementById('completedTasks');
 
-if (completedTasksList.getElementsByTagName('li').length === 0) {
-    completedTasksHeader.style.display = 'none';
-} else {
-    completedTasksHeader.style.display = 'block'; 
-}
+    if (completedTasksList.getElementsByTagName('li').length === 0) {
+        completedTasksHeader.style.display = 'none';
+    } else {
+        completedTasksHeader.style.display = 'block';
+    }
 
 }
-function addTasksCheck(){
-var addTasksHeader = document.getElementById('addTasks-header');
-var addTasksList = document.getElementById('todoList');
-var completedTasksList = document.getElementById('completedTasks');
+function addTasksCheck() {
+    var addTasksHeader = document.getElementById('addTasks-header');
+    var addTasksList = document.getElementById('todoList');
+    var completedTasksList = document.getElementById('completedTasks');
 
-if (addTasksList.getElementsByTagName('li').length === 0 && completedTasksList.getElementsByTagName('li').length === 0) {
-    addTasksHeader.style.display = 'block';
-} else {
-    addTasksHeader.style.display = 'none'; 
-}
+    if (addTasksList.getElementsByTagName('li').length === 0 && completedTasksList.getElementsByTagName('li').length === 0) {
+        addTasksHeader.style.display = 'block';
+    } else {
+        addTasksHeader.style.display = 'none';
+    }
 
 }
 
