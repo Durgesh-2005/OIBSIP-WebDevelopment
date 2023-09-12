@@ -12,8 +12,10 @@ todoInput.addEventListener('keydown', function (event) {
 });
 
 // Load tasks from Local Storage when the page loads
-window.addEventListener('load', loadTasks);
-
+window.addEventListener('load', function () {
+    loadTasks();
+    addTasksCheck();
+});
 addBtn.addEventListener('click', addTask);
 
 function addTask() {
