@@ -1,8 +1,8 @@
 const CACHE_NAME = 'todo-list-app-cache';
 const urlsToCache = [
-  './idex.html',
-  './idex.css',
-  './idex.js',
+  './index.html',
+  './index.css',
+  './index.js',
   './todo-list.png'
 ];
 
